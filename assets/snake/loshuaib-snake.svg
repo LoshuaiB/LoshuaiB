@@ -1,0 +1,300 @@
+<svg viewBox="-16 -32 880 192" width="880" height="192" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">LoshuaiB snake animation</title>
+  <desc id="description">A purple snake crosses a GitHub-style grid and eats green cells spelling LoshuaiB.</desc>
+  <style>
+    :root {
+      --cb: #1b1f230a;
+      --cs: purple;
+      --ce: #ebedf0;
+      --c1: #9be9a8;
+      --c2: #40c463;
+      --c3: #30a14e;
+      --c4: #216e39;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ce: #161b22;
+        --c1: #01311f;
+        --c2: #034525;
+        --c3: #0f6d31;
+        --c4: #00c647;
+      }
+    }
+    .cell,
+    .food,
+    .score,
+    .snake {
+      shape-rendering: geometricPrecision;
+    }
+    .cell {
+      fill: var(--ce);
+      stroke: var(--cb);
+      stroke-width: 1px;
+    }
+    .food {
+      stroke: var(--cb);
+      stroke-width: 1px;
+    }
+    .l1 { fill: var(--c1); }
+    .l2 { fill: var(--c2); }
+    .l3 { fill: var(--c3); }
+    .l4 { fill: var(--c4); }
+    .snake { fill: var(--cs); }
+  </style>
+
+  <defs>
+    <rect id="cell" x="2" y="2" width="12" height="12" rx="2" ry="2"/>
+    <g id="column">
+      <use href="#cell" class="cell" y="0"/>
+      <use href="#cell" class="cell" y="16"/>
+      <use href="#cell" class="cell" y="32"/>
+      <use href="#cell" class="cell" y="48"/>
+      <use href="#cell" class="cell" y="64"/>
+      <use href="#cell" class="cell" y="80"/>
+      <use href="#cell" class="cell" y="96"/>
+    </g>
+
+    <!-- 337 sixteen-pixel steps: one entry step, seven 47-cell rows, and eight exit steps. -->
+    <path id="head-route" pathLength="1" d="M48-16V0H784V16H48V32H784V48H48V64H784V80H48V96H912"/>
+    <path id="body-route-1" pathLength="1" d="M48-32V0H784V16H48V32H784V48H48V64H784V80H48V96H896"/>
+    <path id="body-route-2" pathLength="1" d="M48-48V0H784V16H48V32H784V48H48V64H784V80H48V96H880"/>
+    <path id="body-route-3" pathLength="1" d="M48-64V0H784V16H48V32H784V48H48V64H784V80H48V96H864"/>
+
+    <mask id="food-mask" maskUnits="userSpaceOnUse" x="-16" y="-32" width="880" height="192">
+      <rect x="-16" y="-32" width="880" height="192" fill="#fff"/>
+      <use href="#head-route" transform="translate(8 8)" fill="none" stroke="#000" stroke-width="14.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1" stroke-dashoffset="1">
+        <animate attributeName="stroke-dashoffset" dur="34300ms" repeatCount="indefinite" calcMode="linear" values="1;1;0" keyTimes="0;.017493;1"/>
+      </use>
+    </mask>
+
+    <clipPath id="score-clip" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="144" width="0" height="12">
+        <animate attributeName="width" dur="34300ms" repeatCount="indefinite" calcMode="linear"
+          values="0;0;53;174.143;280.143;431.572;530;636;848;848"
+          keyTimes="0;.020408;.154519;.291545;.428571;.565598;.702624;.839650;.976676;1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- The fixed 53-by-7 GitHub contribution grid. -->
+  <g aria-hidden="true">
+    <use href="#column" x="0"/>
+    <use href="#column" x="16"/>
+    <use href="#column" x="32"/>
+    <use href="#column" x="48"/>
+    <use href="#column" x="64"/>
+    <use href="#column" x="80"/>
+    <use href="#column" x="96"/>
+    <use href="#column" x="112"/>
+    <use href="#column" x="128"/>
+    <use href="#column" x="144"/>
+    <use href="#column" x="160"/>
+    <use href="#column" x="176"/>
+    <use href="#column" x="192"/>
+    <use href="#column" x="208"/>
+    <use href="#column" x="224"/>
+    <use href="#column" x="240"/>
+    <use href="#column" x="256"/>
+    <use href="#column" x="272"/>
+    <use href="#column" x="288"/>
+    <use href="#column" x="304"/>
+    <use href="#column" x="320"/>
+    <use href="#column" x="336"/>
+    <use href="#column" x="352"/>
+    <use href="#column" x="368"/>
+    <use href="#column" x="384"/>
+    <use href="#column" x="400"/>
+    <use href="#column" x="416"/>
+    <use href="#column" x="432"/>
+    <use href="#column" x="448"/>
+    <use href="#column" x="464"/>
+    <use href="#column" x="480"/>
+    <use href="#column" x="496"/>
+    <use href="#column" x="512"/>
+    <use href="#column" x="528"/>
+    <use href="#column" x="544"/>
+    <use href="#column" x="560"/>
+    <use href="#column" x="576"/>
+    <use href="#column" x="592"/>
+    <use href="#column" x="608"/>
+    <use href="#column" x="624"/>
+    <use href="#column" x="640"/>
+    <use href="#column" x="656"/>
+    <use href="#column" x="672"/>
+    <use href="#column" x="688"/>
+    <use href="#column" x="704"/>
+    <use href="#column" x="720"/>
+    <use href="#column" x="736"/>
+    <use href="#column" x="752"/>
+    <use href="#column" x="768"/>
+    <use href="#column" x="784"/>
+    <use href="#column" x="800"/>
+    <use href="#column" x="816"/>
+    <use href="#column" x="832"/>
+  </g>
+
+  <!-- A centered 5-by-7 bitmap spelling the exact mixed-case name LoshuaiB. -->
+  <g mask="url(#food-mask)" aria-hidden="true">
+    <g>
+      <use href="#cell" class="food l1" x="48" y="0"/>
+      <use href="#cell" class="food l1" x="336" y="0"/>
+      <use href="#cell" class="food l1" x="656" y="0"/>
+      <use href="#cell" class="food l1" x="720" y="0"/>
+      <use href="#cell" class="food l1" x="736" y="0"/>
+      <use href="#cell" class="food l1" x="752" y="0"/>
+      <use href="#cell" class="food l1" x="768" y="0"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l2" x="48" y="16"/>
+      <use href="#cell" class="food l2" x="160" y="16"/>
+      <use href="#cell" class="food l2" x="176" y="16"/>
+      <use href="#cell" class="food l2" x="192" y="16"/>
+      <use href="#cell" class="food l2" x="256" y="16"/>
+      <use href="#cell" class="food l2" x="272" y="16"/>
+      <use href="#cell" class="food l2" x="288" y="16"/>
+      <use href="#cell" class="food l2" x="304" y="16"/>
+      <use href="#cell" class="food l2" x="336" y="16"/>
+      <use href="#cell" class="food l2" x="432" y="16"/>
+      <use href="#cell" class="food l2" x="496" y="16"/>
+      <use href="#cell" class="food l2" x="544" y="16"/>
+      <use href="#cell" class="food l2" x="560" y="16"/>
+      <use href="#cell" class="food l2" x="576" y="16"/>
+      <use href="#cell" class="food l2" x="720" y="16"/>
+      <use href="#cell" class="food l2" x="784" y="16"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l3" x="48" y="32"/>
+      <use href="#cell" class="food l3" x="144" y="32"/>
+      <use href="#cell" class="food l3" x="208" y="32"/>
+      <use href="#cell" class="food l3" x="240" y="32"/>
+      <use href="#cell" class="food l3" x="336" y="32"/>
+      <use href="#cell" class="food l3" x="368" y="32"/>
+      <use href="#cell" class="food l3" x="384" y="32"/>
+      <use href="#cell" class="food l3" x="432" y="32"/>
+      <use href="#cell" class="food l3" x="496" y="32"/>
+      <use href="#cell" class="food l3" x="592" y="32"/>
+      <use href="#cell" class="food l3" x="640" y="32"/>
+      <use href="#cell" class="food l3" x="656" y="32"/>
+      <use href="#cell" class="food l3" x="720" y="32"/>
+      <use href="#cell" class="food l3" x="784" y="32"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l4" x="48" y="48"/>
+      <use href="#cell" class="food l4" x="144" y="48"/>
+      <use href="#cell" class="food l4" x="208" y="48"/>
+      <use href="#cell" class="food l4" x="256" y="48"/>
+      <use href="#cell" class="food l4" x="272" y="48"/>
+      <use href="#cell" class="food l4" x="288" y="48"/>
+      <use href="#cell" class="food l4" x="336" y="48"/>
+      <use href="#cell" class="food l4" x="352" y="48"/>
+      <use href="#cell" class="food l4" x="400" y="48"/>
+      <use href="#cell" class="food l4" x="432" y="48"/>
+      <use href="#cell" class="food l4" x="496" y="48"/>
+      <use href="#cell" class="food l4" x="544" y="48"/>
+      <use href="#cell" class="food l4" x="560" y="48"/>
+      <use href="#cell" class="food l4" x="576" y="48"/>
+      <use href="#cell" class="food l4" x="592" y="48"/>
+      <use href="#cell" class="food l4" x="656" y="48"/>
+      <use href="#cell" class="food l4" x="720" y="48"/>
+      <use href="#cell" class="food l4" x="736" y="48"/>
+      <use href="#cell" class="food l4" x="752" y="48"/>
+      <use href="#cell" class="food l4" x="768" y="48"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l3" x="48" y="64"/>
+      <use href="#cell" class="food l3" x="144" y="64"/>
+      <use href="#cell" class="food l3" x="208" y="64"/>
+      <use href="#cell" class="food l3" x="304" y="64"/>
+      <use href="#cell" class="food l3" x="336" y="64"/>
+      <use href="#cell" class="food l3" x="400" y="64"/>
+      <use href="#cell" class="food l3" x="432" y="64"/>
+      <use href="#cell" class="food l3" x="496" y="64"/>
+      <use href="#cell" class="food l3" x="528" y="64"/>
+      <use href="#cell" class="food l3" x="592" y="64"/>
+      <use href="#cell" class="food l3" x="656" y="64"/>
+      <use href="#cell" class="food l3" x="720" y="64"/>
+      <use href="#cell" class="food l3" x="784" y="64"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l2" x="48" y="80"/>
+      <use href="#cell" class="food l2" x="144" y="80"/>
+      <use href="#cell" class="food l2" x="208" y="80"/>
+      <use href="#cell" class="food l2" x="304" y="80"/>
+      <use href="#cell" class="food l2" x="336" y="80"/>
+      <use href="#cell" class="food l2" x="400" y="80"/>
+      <use href="#cell" class="food l2" x="432" y="80"/>
+      <use href="#cell" class="food l2" x="496" y="80"/>
+      <use href="#cell" class="food l2" x="528" y="80"/>
+      <use href="#cell" class="food l2" x="576" y="80"/>
+      <use href="#cell" class="food l2" x="592" y="80"/>
+      <use href="#cell" class="food l2" x="656" y="80"/>
+      <use href="#cell" class="food l2" x="720" y="80"/>
+      <use href="#cell" class="food l2" x="784" y="80"/>
+    </g>
+    <g>
+      <use href="#cell" class="food l1" x="48" y="96"/>
+      <use href="#cell" class="food l1" x="64" y="96"/>
+      <use href="#cell" class="food l1" x="80" y="96"/>
+      <use href="#cell" class="food l1" x="96" y="96"/>
+      <use href="#cell" class="food l1" x="112" y="96"/>
+      <use href="#cell" class="food l1" x="160" y="96"/>
+      <use href="#cell" class="food l1" x="176" y="96"/>
+      <use href="#cell" class="food l1" x="192" y="96"/>
+      <use href="#cell" class="food l1" x="240" y="96"/>
+      <use href="#cell" class="food l1" x="256" y="96"/>
+      <use href="#cell" class="food l1" x="272" y="96"/>
+      <use href="#cell" class="food l1" x="288" y="96"/>
+      <use href="#cell" class="food l1" x="336" y="96"/>
+      <use href="#cell" class="food l1" x="400" y="96"/>
+      <use href="#cell" class="food l1" x="448" y="96"/>
+      <use href="#cell" class="food l1" x="464" y="96"/>
+      <use href="#cell" class="food l1" x="480" y="96"/>
+      <use href="#cell" class="food l1" x="496" y="96"/>
+      <use href="#cell" class="food l1" x="544" y="96"/>
+      <use href="#cell" class="food l1" x="560" y="96"/>
+      <use href="#cell" class="food l1" x="592" y="96"/>
+      <use href="#cell" class="food l1" x="640" y="96"/>
+      <use href="#cell" class="food l1" x="656" y="96"/>
+      <use href="#cell" class="food l1" x="672" y="96"/>
+      <use href="#cell" class="food l1" x="720" y="96"/>
+      <use href="#cell" class="food l1" x="736" y="96"/>
+      <use href="#cell" class="food l1" x="752" y="96"/>
+      <use href="#cell" class="food l1" x="768" y="96"/>
+    </g>
+  </g>
+
+  <!-- The eaten-cell accumulator from the original snk layout. -->
+  <g clip-path="url(#score-clip)" aria-hidden="true">
+    <rect class="score l1" x="0" y="144" width="53" height="12"/>
+    <rect class="score l2" x="53" y="144" width="121.143" height="12"/>
+    <rect class="score l3" x="174.143" y="144" width="106" height="12"/>
+    <rect class="score l4" x="280.143" y="144" width="151.429" height="12"/>
+    <rect class="score l3" x="431.572" y="144" width="98.428" height="12"/>
+    <rect class="score l2" x="530" y="144" width="106" height="12"/>
+    <rect class="score l1" x="636" y="144" width="212" height="12"/>
+  </g>
+
+  <!-- Four original-size snk segments, each one grid step behind the previous segment. -->
+  <g aria-hidden="true">
+    <rect class="snake" x="0.8" y="0.8" width="14.4" height="14.4" rx="4.5" ry="4.5">
+      <animateMotion dur="34300ms" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;.017493;1">
+        <mpath href="#head-route"/>
+      </animateMotion>
+    </rect>
+    <rect class="snake" x="1.8" y="1.8" width="12.3" height="12.3" rx="4.1" ry="4.1">
+      <animateMotion dur="34300ms" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;.017493;1">
+        <mpath href="#body-route-1"/>
+      </animateMotion>
+    </rect>
+    <rect class="snake" x="2.6" y="2.6" width="10.8" height="10.8" rx="3.6" ry="3.6">
+      <animateMotion dur="34300ms" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;.017493;1">
+        <mpath href="#body-route-2"/>
+      </animateMotion>
+    </rect>
+    <rect class="snake" x="3" y="3" width="9.9" height="9.9" rx="3.3" ry="3.3">
+      <animateMotion dur="34300ms" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;.017493;1">
+        <mpath href="#body-route-3"/>
+      </animateMotion>
+    </rect>
+  </g>
+</svg>
