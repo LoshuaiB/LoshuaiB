@@ -24,7 +24,7 @@
 
 <!-- Local LoshuaiB Snake Animation 本地 LoshuaiB 贪吃蛇动画 -->
 
-<img src="./assets/snake/loshuaib-snake.svg" alt="Snake eating LoshuaiB" width="100%" />
+<img src="./assets/snake/letter-snake.svg" alt="Snake eating LoShauiB" width="100%" />
 
 </div>
 
@@ -33,7 +33,7 @@
 <table align="center">
 
 
-<tr><td width="1000">
+<tr><td width="100%">
 
 ### ⚡ About Me
 
