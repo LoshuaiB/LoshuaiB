@@ -1,0 +1,400 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 -32 880 192" width="880" height="192" role="img" aria-labelledby="title description">
+  <title id="title">LoShauiB snake animation</title>
+  <desc id="description">A GitHub-style snake eats the pixels in LoShauiB one at a time.</desc>
+  <style>
+    :root {
+      --border: #1b1f230a;
+      --snake: purple;
+      --empty: #ebedf0;
+      --level-1: #9be9a8;
+      --level-2: #40c463;
+      --level-3: #30a14e;
+      --level-4: #216e39;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --empty: #161b22;
+        --level-1: #01311f;
+        --level-2: #034525;
+        --level-3: #0f6d31;
+        --level-4: #00c647;
+      }
+    }
+    .cell { shape-rendering: geometricPrecision; stroke: var(--border); stroke-width: 1px; }
+    .level-1 { color: var(--level-1); }
+    .level-2 { color: var(--level-2); }
+    .level-3 { color: var(--level-3); }
+    .level-4 { color: var(--level-4); }
+  </style>
+  <defs>
+    <pattern id="contribution-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect class="cell" x="2" y="2" width="12" height="12" rx="2" ry="2" fill="var(--empty)"/>
+    </pattern>
+    <path id="letter-route" d="M8 -8H56V104H120H168H200H216V24H168H152V88H248V104H312V56H248V8H312H344V104H408V72H360V56H392H456V40H504V72H456V104H504V88H440H536V104H600V40H536V88H520V40H648H664V104H680V120H648V104H632V8H664H728V104H776H792V56H728H712V8H792V40H920"/>
+    <linearGradient id="progress-colors">
+      <stop offset="0" stop-color="var(--level-1)"/><stop offset=".214" stop-color="var(--level-1)"/>
+      <stop offset=".214" stop-color="var(--level-2)"/><stop offset=".446" stop-color="var(--level-2)"/>
+      <stop offset=".446" stop-color="var(--level-3)"/><stop offset=".696" stop-color="var(--level-3)"/>
+      <stop offset=".696" stop-color="var(--level-4)"/><stop offset="1" stop-color="var(--level-4)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="848" height="112" fill="url(#contribution-grid)"/>
+
+  <rect class="cell level-1" x="50" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.054817;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.059634;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.06445;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.069267;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.074084;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.078901;1"/>
+  </rect>
+  <rect class="cell level-1" x="50" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.083717;1"/>
+  </rect>
+  <rect class="cell level-1" x="66" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.088534;1"/>
+  </rect>
+  <rect class="cell level-1" x="82" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.093351;1"/>
+  </rect>
+  <rect class="cell level-1" x="98" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.098168;1"/>
+  </rect>
+  <rect class="cell level-1" x="114" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.102984;1"/>
+  </rect>
+  <rect class="cell level-2" x="162" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.170419;1"/>
+  </rect>
+  <rect class="cell level-2" x="178" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.165602;1"/>
+  </rect>
+  <rect class="cell level-2" x="194" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.160785;1"/>
+  </rect>
+  <rect class="cell level-2" x="146" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.180052;1"/>
+  </rect>
+  <rect class="cell level-2" x="210" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.151152;1"/>
+  </rect>
+  <rect class="cell level-2" x="146" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.184869;1"/>
+  </rect>
+  <rect class="cell level-2" x="210" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.146335;1"/>
+  </rect>
+  <rect class="cell level-2" x="146" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.189686;1"/>
+  </rect>
+  <rect class="cell level-2" x="210" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.141518;1"/>
+  </rect>
+  <rect class="cell level-2" x="146" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.194503;1"/>
+  </rect>
+  <rect class="cell level-2" x="210" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.136702;1"/>
+  </rect>
+  <rect class="cell level-2" x="162" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.117435;1"/>
+  </rect>
+  <rect class="cell level-2" x="178" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.122251;1"/>
+  </rect>
+  <rect class="cell level-2" x="194" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.127068;1"/>
+  </rect>
+  <rect class="cell level-3" x="242" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.295654;1"/>
+  </rect>
+  <rect class="cell level-3" x="258" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.300471;1"/>
+  </rect>
+  <rect class="cell level-3" x="274" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.305288;1"/>
+  </rect>
+  <rect class="cell level-3" x="290" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.310105;1"/>
+  </rect>
+  <rect class="cell level-3" x="306" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.314921;1"/>
+  </rect>
+  <rect class="cell level-3" x="242" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.290838;1"/>
+  </rect>
+  <rect class="cell level-3" x="242" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.286021;1"/>
+  </rect>
+  <rect class="cell level-3" x="242" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.281204;1"/>
+  </rect>
+  <rect class="cell level-3" x="258" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.276387;1"/>
+  </rect>
+  <rect class="cell level-3" x="274" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.271571;1"/>
+  </rect>
+  <rect class="cell level-3" x="290" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.266754;1"/>
+  </rect>
+  <rect class="cell level-3" x="306" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.261937;1"/>
+  </rect>
+  <rect class="cell level-3" x="306" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.25712;1"/>
+  </rect>
+  <rect class="cell level-3" x="306" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.252304;1"/>
+  </rect>
+  <rect class="cell level-3" x="242" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.22822;1"/>
+  </rect>
+  <rect class="cell level-3" x="258" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.233037;1"/>
+  </rect>
+  <rect class="cell level-3" x="274" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.237853;1"/>
+  </rect>
+  <rect class="cell level-3" x="290" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.24267;1"/>
+  </rect>
+  <rect class="cell level-3" x="306" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.247487;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.324555;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.329372;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.334188;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.339005;1"/>
+  </rect>
+  <rect class="cell level-1" x="370" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.40644;1"/>
+  </rect>
+  <rect class="cell level-1" x="386" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.411257;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.343822;1"/>
+  </rect>
+  <rect class="cell level-1" x="354" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.396806;1"/>
+  </rect>
+  <rect class="cell level-1" x="402" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.382356;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.348639;1"/>
+  </rect>
+  <rect class="cell level-1" x="402" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.377539;1"/>
+  </rect>
+  <rect class="cell level-1" x="338" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.353455;1"/>
+  </rect>
+  <rect class="cell level-1" x="402" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.372723;1"/>
+  </rect>
+  <rect class="cell level-4" x="450" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.43534;1"/>
+  </rect>
+  <rect class="cell level-4" x="466" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.440157;1"/>
+  </rect>
+  <rect class="cell level-4" x="482" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.444974;1"/>
+  </rect>
+  <rect class="cell level-4" x="498" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.454607;1"/>
+  </rect>
+  <rect class="cell level-4" x="450" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.473874;1"/>
+  </rect>
+  <rect class="cell level-4" x="466" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.469058;1"/>
+  </rect>
+  <rect class="cell level-4" x="482" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.464241;1"/>
+  </rect>
+  <rect class="cell level-4" x="498" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.459424;1"/>
+  </rect>
+  <rect class="cell level-4" x="434" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.522042;1"/>
+  </rect>
+  <rect class="cell level-4" x="498" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.502775;1"/>
+  </rect>
+  <rect class="cell level-4" x="450" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.483508;1"/>
+  </rect>
+  <rect class="cell level-4" x="466" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.488325;1"/>
+  </rect>
+  <rect class="cell level-4" x="482" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.493141;1"/>
+  </rect>
+  <rect class="cell level-4" x="498" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.497958;1"/>
+  </rect>
+  <rect class="cell level-2" x="530" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.61356;1"/>
+  </rect>
+  <rect class="cell level-2" x="594" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.594293;1"/>
+  </rect>
+  <rect class="cell level-2" x="530" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.618377;1"/>
+  </rect>
+  <rect class="cell level-2" x="594" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.589476;1"/>
+  </rect>
+  <rect class="cell level-2" x="530" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.623194;1"/>
+  </rect>
+  <rect class="cell level-2" x="594" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.58466;1"/>
+  </rect>
+  <rect class="cell level-2" x="530" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.550942;1"/>
+  </rect>
+  <rect class="cell level-2" x="594" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.579843;1"/>
+  </rect>
+  <rect class="cell level-2" x="546" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.560576;1"/>
+  </rect>
+  <rect class="cell level-2" x="562" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.565393;1"/>
+  </rect>
+  <rect class="cell level-2" x="578" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.570209;1"/>
+  </rect>
+  <rect class="cell level-2" x="594" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.575026;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.77733;1"/>
+  </rect>
+  <rect class="cell level-3" x="642" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.685812;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.690628;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.695445;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.700262;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.705079;1"/>
+  </rect>
+  <rect class="cell level-3" x="642" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.733979;1"/>
+  </rect>
+  <rect class="cell level-3" x="658" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.709895;1"/>
+  </rect>
+  <rect class="cell level-3" x="674" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.714712;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.796597;1"/>
+  </rect>
+  <rect class="cell level-4" x="738" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.907382;1"/>
+  </rect>
+  <rect class="cell level-4" x="754" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.912199;1"/>
+  </rect>
+  <rect class="cell level-4" x="770" y="2" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.917016;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.801414;1"/>
+  </rect>
+  <rect class="cell level-4" x="786" y="18" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.926649;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.80623;1"/>
+  </rect>
+  <rect class="cell level-4" x="786" y="34" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.931466;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.811047;1"/>
+  </rect>
+  <rect class="cell level-4" x="738" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.873665;1"/>
+  </rect>
+  <rect class="cell level-4" x="754" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.868848;1"/>
+  </rect>
+  <rect class="cell level-4" x="770" y="50" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.864031;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.815864;1"/>
+  </rect>
+  <rect class="cell level-4" x="786" y="66" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.854398;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.820681;1"/>
+  </rect>
+  <rect class="cell level-4" x="786" y="82" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.849581;1"/>
+  </rect>
+  <rect class="cell level-4" x="722" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.825497;1"/>
+  </rect>
+  <rect class="cell level-4" x="738" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.830314;1"/>
+  </rect>
+  <rect class="cell level-4" x="754" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.835131;1"/>
+  </rect>
+  <rect class="cell level-4" x="770" y="98" width="12" height="12" rx="2" ry="2" fill="currentColor">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" values="1;0;0" keyTimes="0;0.839948;1"/>
+  </rect>
+
+  <rect x="0" y="144" width="0" height="12" rx="2" fill="url(#progress-colors)">
+    <animate attributeName="width" dur="20s" repeatCount="indefinite" values="0;0;848;848" keyTimes="0;0.05;0.97;1"/>
+  </rect>
+
+  <!-- Four segments follow the route one grid cell apart. -->
+  <g fill="var(--snake)">
+    <rect x="-7.2" y="-7.2" width="14.4" height="14.4" rx="4.5" ry="4.5">
+      <animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.015464;0.015464;1;1" keyTimes="0;0.05;0.97;1"><mpath href="#letter-route"/></animateMotion>
+    </rect>
+    <rect x="-6.15" y="-6.15" width="12.3" height="12.3" rx="4.1" ry="4.1">
+      <animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.010309;0.010309;1;1" keyTimes="0;0.05;0.974817;1"><mpath href="#letter-route"/></animateMotion>
+    </rect>
+    <rect x="-5.4" y="-5.4" width="10.8" height="10.8" rx="3.6" ry="3.6">
+      <animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0.005155;0.005155;1;1" keyTimes="0;0.05;0.979634;1"><mpath href="#letter-route"/></animateMotion>
+    </rect>
+    <rect x="-4.95" y="-4.95" width="9.9" height="9.9" rx="3.3" ry="3.3">
+      <animateMotion dur="20s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.98445;1"><mpath href="#letter-route"/></animateMotion>
+    </rect>
+  </g>
+</svg>
