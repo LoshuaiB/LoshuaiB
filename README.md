@@ -33,13 +33,13 @@
 <table>
 
 
-<tr><td>
+<tr><td height="200">
 
 ### ⚡ About Me
 
 <img align="right" width="88" src="./assets/images/icon.jpg" />
 
-<p>&emsp;&emsp;SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+<p>&emsp;&emsp;</p>
 <p>&emsp;&emsp;</p>
 <p>&emsp;&emsp;<a href="" target="_blank"></a></p>
 <p>&emsp;&emsp;</p>
