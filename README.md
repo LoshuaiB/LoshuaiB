@@ -39,9 +39,9 @@
 
 <img align="right" width="88" src="./assets/images/icon.jpg" />
 
+<p>&emsp;&emsp;                                                                                  </p>
 <p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;<a href="https://github.com/Peter-JXL/vuepressblog/blob/master/images/QR-Code.png" target="_blank"></a></p>
+<p>&emsp;&emsp;<a href="" target="_blank"></a></p>
 <p>&emsp;&emsp;</p>
 <p>&emsp;&emsp;<strong></strong></p>
 
