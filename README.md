@@ -33,7 +33,7 @@
 <table align="center">
 
 
-<tr><td width="500">
+<tr><td width="1000">
 
 ### ⚡ About Me
 
