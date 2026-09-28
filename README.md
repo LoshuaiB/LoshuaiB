@@ -18,7 +18,7 @@
 
   <div>
     <a href=""><img src="https://img.shields.io/badge/Website-博客-8c36db" /></a>&emsp;
-    <img src="https://komarev.com/ghpvc/?username=SP-XD&style=flat&color=orange&label=PROFILE+VIEWS" alt="访问量统计" />&emsp;
+    <!-- <img src="https://komarev.com/ghpvc/?username=SP-XD&style=flat&color=orange&label=PROFILE+VIEWS" alt="访问量统计" />&emsp; -->
   </div>
 
 
