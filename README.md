@@ -3,7 +3,9 @@
 
   <!-- knock code pictures 敲代码的图片 -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:0F172A,50:1D4ED8,100:06B6D4&text=LoshuaiB&fontColor=000000&fontSize=65&fontAlignY=45&desc=Embedded%20Systems%20%7C%20Open%20Source%20%7C%20IoT&descSize=18&descAlignY=65&animation=fadeIn&descColor=000000" />
+<div style="background-color: #0F172A; border-radius: 10px; overflow: hidden; padding: 0;">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:0F172A,50:1D4ED8,100:06B6D4&text=LoshuaiB&fontColor=FFFFFF&fontSize=65&fontAlignY=45&desc=Embedded%20Systems%20%7C%20Open%20Source%20%7C%20IoT&descSize=18&descAlignY=65&animation=fadeIn" />
+</div>
 
 
   <!-- for beauty 留个空行好看点 -->
