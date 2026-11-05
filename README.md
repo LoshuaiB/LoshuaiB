@@ -3,7 +3,7 @@
 
   <!-- knock code pictures 敲代码的图片 -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:0F172A,50:1D4ED8,100:06B6D4&text=LoshuaiB&fontColor=FFFFFF&stroke=0F172A&strokeWidth=2&fontSize=65&fontAlignY=45&desc=Embedded%20Systems%20%7C%20Open%20Source%20%7C%20IoT&descSize=18&descAlignY=65&animation=fadeIn" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:0F172A,50:1D4ED8,100:06B6D4&text=LoshuaiB&fontColor=FFFFFF&fontSize=65&fontAlignY=45&desc=Embedded%20Systems%20%7C%20Open%20Source%20%7C%20IoT&descSize=18&descAlignY=65&animation=fadeIn&stroke=3B82F6&strokeWidth=2" />
 
 
   <!-- for beauty 留个空行好看点 -->
