@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" role="img" aria-labelledby="title description">
+  <title id="title">LoshuaiB</title>
+  <desc id="description">Embedded Systems, Open Source and IoT</desc>
+
+  <defs>
+    <linearGradient id="blob" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="960" y2="240">
+      <stop offset="0" stop-color="#10245f"/>
+      <stop offset="0.5" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0891b2"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="-8 480 120;8 480 120;-8 480 120" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" calcMode="spline" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.34"/>
+    </filter>
+    <style>
+      .outlined {
+        fill: #ffffff;
+        stroke: #06b6d4;
+        paint-order: stroke fill;
+        stroke-linejoin: round;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 76px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        stroke-width: 3px;
+      }
+      .subtitle {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+
+  <path d="M120 47C175 12 270 20 346 25C435 33 502 2 580 24C666 48 766 28 824 68C872 101 854 192 790 213C714 238 643 209 565 220C480 233 399 245 320 220C241 198 157 208 119 155C89 114 91 72 120 47Z" fill="url(#blob)" filter="url(#shadow)">
+    <animate attributeName="d" values="M120 47C175 12 270 20 346 25C435 33 502 2 580 24C666 48 766 28 824 68C872 101 854 192 790 213C714 238 643 209 565 220C480 233 399 245 320 220C241 198 157 208 119 155C89 114 91 72 120 47Z;M108 58C166 4 263 31 351 14C442 -2 510 18 586 33C674 50 778 14 837 75C879 118 847 188 781 224C704 252 635 200 554 232C466 252 386 229 309 225C226 218 143 202 106 150C78 110 78 83 108 58Z;M135 34C189 22 278 5 359 36C442 67 509 -12 575 15C662 51 748 42 818 59C876 74 873 177 801 205C730 232 657 225 570 211C485 197 410 253 331 214C251 175 175 225 113 162C79 127 100 57 135 34Z;M120 47C175 12 270 20 346 25C435 33 502 2 580 24C666 48 766 28 824 68C872 101 854 192 790 213C714 238 643 209 565 220C480 233 399 245 320 220C241 198 157 208 119 155C89 114 91 72 120 47Z" keyTimes="0;0.33;0.66;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" calcMode="spline" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.96;1;0.96" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" calcMode="spline" dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <text x="480" y="120" text-anchor="middle" class="outlined title">LoshuaiB</text>
+  <text x="480" y="172" text-anchor="middle" class="outlined subtitle">Embedded Systems | Open Source | IoT</text>
+</svg>
