@@ -39,7 +39,11 @@
 
 <table align="center">
 
-## 🙋 About Me
+<tr><td width="1000">
+
+### ⚡ About Me
+
+<img align="right" width="88" src="./assets/images/icon.jpg" />
 
 Hi! I'm **LoshuaiB**, an Embedded Systems Developer and Open Source Contributor passionate about embedded hardware, firmware engineering, IoT, and intelligent connected devices.
 
@@ -62,18 +66,6 @@ I'm particularly interested in turning low-level hardware capabilities into comp
 
 **Build Hardware · Develop Firmware · Connect Everything · Contribute Open Source**
 
-
-<tr><td width="1000">
-
-### ⚡ About Me
-
-<img align="right" width="88" src="./assets/images/icon.jpg" />
-
-<p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;<a href="" target="_blank"></a></p>
-<p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;<strong></strong></p>
 
 
   <!-- for beauty 留个空行好看点 -->
